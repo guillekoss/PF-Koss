@@ -29,23 +29,44 @@
     <main>
         <h2>Contacto</h2>
         <h3 class="centrado">Dejanos tus datos para enterarte de las noticias de The Office.</h3>
-        <section>
-            <form>
-                <div><p class="texto-contacto">Tu nombre</p><input type="text" name="nombre" placeholder="Introducí tu nombre" class="texto-completar"></div>
-                <div><p class="texto-contacto">Tu email</p><input type="email" name="email" placeholder="Introducí tu email" class="texto-completar"></div>
-                <div><p class="texto-contacto">Tu teléfono</p><input type="number" name="telefono" placeholder="Introducí tu número de teléfono" class="texto-completar"></div>
-                <div><label for="seccionpreferida"><p class="texto-contacto">¿Qué sección te interesa más?</p></label><select name="seccionpreferida" id="seccionpreferida" class="boton"></div>
+        <form id="contact_form" name="contact_form" method="post">
+            <div class="m-5 row">
+                <div class="col">
+                    <label>Tu nombre</label>
+                    <input type="text" required maxlength="40"name="nombre" placeholder="Introducí tu nombre">
+                </div>
+                <div class="col">
+                    <label>Tu apellido</label>
+                    <input type="text" required maxlength="40" name="apellido" placeholder="Introducí tu apellido">
+                </div>
+            </div>
+            <div class="m-5 row">
+                <div class="col">
+                    <label for="email_addr">Tu email</label>
+                    <input type="email" required maxlength="40" name="email" placeholder="Introducí tu email">
+                </div>
+                <div class="col">
+                    <label for="phone_input">Tu teléfono</label>
+                    <input type="tel" required maxlength="40" name="telefono" placeholder="Introducí tu teléfono">
+                </div>
+            </div>
+            <div class="m-5">
+                <label for="message">Dejanos un mensaje</label>
+                <textarea class="form-control" id="message" name="message" rows="5"></textarea>
+            </div>
+            <div class="m-5">
+                <label for="seccionpreferida"><p class="texto-contacto">¿Qué sección te interesa más?</p></label><select name="seccionpreferida" id="seccionpreferida" class="boton"></div>
                     <option value="personajes">Personajes</option>
                     <option value="episodios">Episodios</option>
                     <option value="frases">Frases</option>
                     <option value="encuesta">Encuesta</option>
                 </select>
-                <div>
+            </div>
+            <div class="m-5">
                 <input type="submit" value="Enviar formulario" class="boton"/>
                 <input type="reset" value="Limpiar formulario" class="boton"/>
-                </div>
-            </form>
-        </section>
+            </div>
+        </form>
     </main>
     <footer id="pie">Sitio realizado por Guillermo Javier Koss en 2023.
         <a href="#arriba"><img src="../icons/up-arrow-alt-regular-24.png"></a>
