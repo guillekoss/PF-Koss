@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Episodios</title>
+    <meta name="description" content="En esta página el usuario puede votar por uno o más de sus personajes favoritos de The Office y ver los resultados.">
+    <meta name="keywords"  content="series, netflix, sitcom, falso documental, humor, The Office, Miachel Scott, Pam Beesly, Jim Halpert, Dwight Schrute, encuesta">
+    <title>Encuesta</title>
     <link rel="icon" type="image/x-icon" href="../images/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body id="arriba">
     <header>
-        <section class="top-nav" id="arriba">
-            <div><a href="../index.html"><img class="logodelsitio" id="arriba" src="../images/favicon.png" alt="logo del sitio"></a></div>
+        <section class="top-nav">
+            <div><a href="../index.html"><img class="logodelsitio animate__animated animate__flash" src="../images/favicon.png" alt="logo del sitio"></a></div>
             <input id="menu-toggle" type="checkbox" />
             <label class='menu-button-container' for="menu-toggle">
             <div class='menu-button'></div>
@@ -23,13 +26,14 @@
                 <li><a href="encuesta.html">Encuesta</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
-            <div><a href="#pie"><img src="../icons/down-arrow-alt-regular-24.png"></a></div>
+            <div><a href="#pie"><img src="../icons/down-arrow-alt-regular-24.png" alt="ícono para ir al pie de página"></a></div>
         </section>
     </header>
-    <main>
-        <h2>Encuesta de popularidad de personajes</h2>
+    <main class="centrado">
+                <!-- Encuesta con cuadrados de selección múltiple y botones, con efecto hover de colores. -->
+        <h1>Encuesta de popularidad de personajes</h1>
         <fieldset>
-            <legend><h3 class="centrado">En esta sección podés elegir tu personaje favorito.</h3></legend>
+            <legend><h2>En esta sección podés elegir tu personaje favorito.</h2></legend>
             <ul class="encuesta">
                 <li><input type="checkbox" name="personaje" value="Michael Scott"/>Michael Scott</li>
                 <li><input type="checkbox" name="personaje" value="Dwight Schrute"/>Dwight Schrute</li>
@@ -55,10 +59,9 @@
         </fieldset>
     </main>
     <footer id="pie">Sitio realizado por Guillermo Javier Koss en 2023.
-        <a href="#arriba"><img src="../icons/up-arrow-alt-regular-24.png"></a>
+        <a href="#arriba"><img src="../icons/up-arrow-alt-regular-24.png" alt="ícono para ir arriba de la página"></a>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-
 </body>
 </html>
