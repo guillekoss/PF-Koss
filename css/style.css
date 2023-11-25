@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Se crearon partials de colores, fuentes, header y footer, y el reset, importadas de archivos partial. En colores hay variables que luego se citan luego por el nombre asignado.*/
 /* Selector universal */
 * {
   margin: 0;
@@ -7,19 +8,13 @@
   box-sizing: border-box;
 }
 
-/* Link fuente*/
+/* Link fuente que está en la carpeta fonts */
 @font-face {
   font-family: AmericanTypewriterGeneral;
   src: url(../fonts/American\ Typewriter\ Regular.ttf);
 }
-/* Se creó una variable de colores importada de un archivo en la misma carpeta de SASS, citándose los colores que no sean blanco o negro luego por el nombre asignado.*/
-/* Se escribió el código con anidación. */
-body {
-  margin: 0;
-  height: 100%;
-  background-color: #dedebd;
-}
-body header {
+/* Se practicó con variables creando los colores para que tengan nombres más fáciles de recordar, importadas al archivo scss principal. */
+header {
   background-color: #8b8352;
   justify-content: center;
   align-items: center;
@@ -27,7 +22,7 @@ body header {
   top: 0;
   z-index: 1;
 }
-body header .top-nav {
+header .top-nav {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -35,10 +30,29 @@ body header .top-nav {
   height: 60px;
   padding: 1em;
 }
-body header .top-nav .logodelsitio {
+header .top-nav .logodelsitio {
   height: 50px;
 }
+
+footer {
+  color: #6a5a31;
+  font-family: Verdana, sans-serif;
+  font-size: 16px;
+  background-color: #6ade41;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10%;
+}
+
+/* Se escribió el código con anidación. Se usó un mixin para los links quitándoles de esa forma el subrayado y haciendo que siempre conserven el color negro. */
+body {
+  margin: 0;
+  height: 100%;
+  background-color: #dedebd;
+}
 body a {
+  text-decoration: none;
   color: black;
 }
 body .centrado {
@@ -88,16 +102,6 @@ body .boton {
 }
 body .boton:hover {
   background-image: linear-gradient(45deg, white, #6ade41);
-}
-body footer {
-  color: #6a5a31;
-  font-family: Verdana, sans-serif;
-  font-size: 16px;
-  background-color: #6ade41;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 10%;
 }
 
 .menu {

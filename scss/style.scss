@@ -1,55 +1,25 @@
-/* Selector universal */
+/* Se crearon partials de colores, fuentes, header y footer, y el reset, importadas de archivos partial. En colores hay variables que luego se citan luego por el nombre asignado.*/
 
-* {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    box-sizing: border-box;
-}
-
-/* Link fuente*/
-
-@font-face {
-    font-family: AmericanTypewriterGeneral;
-    src: url(../fonts/American\ Typewriter\ Regular.ttf);
-}
-
-/* Se creó una variable de colores importada de un archivo en la misma carpeta de SASS, citándose los colores que no sean blanco o negro luego por el nombre asignado.*/
-
+@import "reset";
+@import "fuentes";
 @import "colores";
+@import "header";
+@import "footer";
 
-/* Se escribió el código con anidación. */
+/* Se escribió el código con anidación. Se usó un mixin para los links quitándoles de esa forma el subrayado y haciendo que siempre conserven el color negro. */
+
+@mixin ancla {
+    text-decoration: none;
+    color: black;
+}
 
 body {
     margin: 0;
     height: 100%;
-    background-color: $color3;
-    
-    header {
-        background-color: $color1;
-        justify-content: center;
-        align-items: center;
-        position: sticky;
-        top: 0; 
-        z-index: 1;
-        
-        .top-nav {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            height: 60px;
-            padding: 1em;
-       
-            
-            .logodelsitio {
-                height: 50px;
-            }
-        }
-    }
+    background-color: $colorBeige;
     
     a {
-        color: black;
+        @include ancla;
     }
     
     .centrado {
@@ -57,7 +27,7 @@ body {
     }
     
     h1 {
-        color: $color2;
+        color: $colorAzul;
         font-family: "AmericanTypewriterGeneral", sans-serif;
         font-size: 34px;
         font-style: bold;
@@ -67,7 +37,7 @@ body {
     }
     
     h2 {
-        color: $color4;
+        color: $colorCeleste;
         font-family: "AmericanTypewriterGeneral", sans-serif;
         font-size: 28px;
         text-align: center;
@@ -76,7 +46,7 @@ body {
     }
     
     h3 {
-        color: $color5;
+        color: $colorMarron;
         font-family: Verdana, sans-serif;
         font-size: 22px;
         text-align: justify;
@@ -101,21 +71,10 @@ body {
         margin: 20px;
         width: 150px;
         border-radius: 10px;
-        background-image: linear-gradient(45deg, $color6, white);
+        background-image: linear-gradient(45deg, $colorVerde, white);
         &:hover {
-            background-image: linear-gradient(45deg, white, $color6)
+            background-image: linear-gradient(45deg, white, $colorVerde)
         }
-    }
-    
-    footer {
-        color: $color5;
-        font-family: Verdana, sans-serif;
-        font-size: 16px;
-        background-color: $color6;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px 10%;
     }
 }
 
@@ -191,7 +150,7 @@ body {
         padding: 0.5em 0;
         width: 100%;
         color: white;
-        background-color: $color7;
+        background-color: $colorGris;
     }
   }
   #menu-toggle ~ .menu li {
@@ -209,7 +168,7 @@ body {
   }
 
   .menu > li:not(:last-child) {
-    border-bottom: 1px solid $color7;
+    border-bottom: 1px solid $colorGris;
   }
   .top-nav {
     z-index: 2;
@@ -219,7 +178,7 @@ body {
 main {
     legend {
         padding: 10px;
-        background: $color7;
+        background: $colorGris;
         color: white;
     }
 
@@ -238,7 +197,7 @@ main {
         text-align: left;
         margin-left: 40%;
         font-size: 16px;
-        color: $color8;
+        color: $colorMarronOscuro;
     }
 
     .episodios-grid-container {
@@ -271,7 +230,7 @@ main {
             .frase {
                 width: 300px;
                 margin-bottom: 20px;
-                background: $color7;
+                background: $colorGris;
                 padding: 20px;
                 text-align: center;
                 color: #fff;
@@ -302,9 +261,9 @@ main {
     width: 0px;
     height: 0px;
     position: absolute;
-    border-left: 10px solid $color7;
+    border-left: 10px solid $colorGris;
     border-right: 10px solid transparent;
-    border-top: 10px solid $color7;
+    border-top: 10px solid $colorGris;
     border-bottom: 10px solid transparent;
     left: 20px;
     bottom: -19px;
@@ -341,4 +300,3 @@ main {
         }
     }
 }
-

@@ -1,0 +1,21 @@
+header {
+    background-color: $colorOcre;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0; 
+    z-index: 1;
+    
+    .top-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+        padding: 1em;
+      
+        .logodelsitio {
+            height: 50px;
+        }
+    }
+}
